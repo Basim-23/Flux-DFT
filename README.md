@@ -144,5 +144,5 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 ---
 
 <p align="center">
-  <em>Built with ❤️ for the computational materials science community | © 2026 FluxDFT</em>
+  <em>© 2026 FluxDFT</em>
 </p>
