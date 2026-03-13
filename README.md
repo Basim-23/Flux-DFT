@@ -107,7 +107,6 @@ FluxDFT provides an **end-to-end workflow** for Density Functional Theory simula
 - **Automated Report Content** — Pre-populated methodology, results tables, and figure captions.
 
 ### ☁️ Flux Cloud & User Experience
-- **Cloud Integration** — User authentication and profile management via [Supabase](https://supabase.com/).
 - **Premium Interface** — Modern dark theme with glassmorphism-inspired components and animated splash screen.
 - **Global Shortcuts** — Intuitive keyboard shortcuts with a built-in shortcuts overlay (press `?` to toggle).
 - **Desktop Notifications** — System alerts for job completions and critical events.
