@@ -1,6 +1,6 @@
 """
 FluxDFT Main Entry Point
-Copyright (c) 2024 Dr. Sherif Yahya & Basim Nasser. MIT License.
+Copyright (c) 2026 Basim Nasser. MIT License.
 """
 
 import sys
@@ -309,7 +309,7 @@ class FluxSplashScreen(QWidget):
         painter.drawText(
             QRect(25, h - 40, 200, 25),
             Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter,
-            "© 2025 FluxDFT"
+            "© 2026 FluxDFT"
         )
         
         # Version with subtle styling

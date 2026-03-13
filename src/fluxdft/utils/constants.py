@@ -7,9 +7,9 @@ from pathlib import Path
 # Application info
 APP_NAME = "FluxDFT"
 APP_VERSION = "2.0.0"
-APP_AUTHOR = "Dr. Sherif Yahya & Basim Nasser"
-APP_COPYRIGHT = "© 2024 Dr. Sherif Yahya & Basim Nasser. MIT License."
-APP_WEBSITE = "https://github.com"
+APP_AUTHOR = "Basim Nasser"
+APP_COPYRIGHT = "© 2026 Basim Nasser. MIT License."
+APP_WEBSITE = "https://github.com/Basim-23/Flux-DFT"
 APP_SUPPORT_EMAIL = ""
 
 # Default paths

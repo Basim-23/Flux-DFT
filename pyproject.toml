@@ -4,13 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fluxdft"
-version = "1.0.0"
-description = "Professional GUI for Quantum ESPRESSO - DFT Made Easy"
+version = "2.0.0"
+description = "Professional GUI for Quantum ESPRESSO with AI-powered analysis, 3D visualization, HPC job management, and automated post-processing."
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [
-    {name = "Dr. Sherif Yahya"},
     {name = "Basim Nasser"}
 ]
 keywords = ["quantum-espresso", "dft", "physics", "gui", "materials-science", "simulation"]

@@ -1,7 +1,7 @@
 """
 Main Window for FluxDFT.
 Professional GUI with Docking Layout ("Scientific Workbench").
-Copyright (c) 2024 Dr. Sherif Yahya & Basim Nasser. MIT License.
+Copyright (c) 2026 Basim Nasser. MIT License.
 """
 
 import sys

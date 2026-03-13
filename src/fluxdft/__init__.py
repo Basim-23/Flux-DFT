@@ -1,7 +1,7 @@
 """
 FluxDFT — Professional GUI for Quantum ESPRESSO
 
-Copyright (c) 2024 Dr. Sherif Yahya & Basim Nasser. MIT License.
+Copyright (c) 2026 Basim Nasser. MIT License.
 
 FluxDFT provides:
 - Core: Structure loading, input building, output parsing, job management
@@ -33,9 +33,9 @@ Modules:
 """
 
 __version__ = "2.0.0"
-__author__ = "Dr. Sherif Yahya & Basim Nasser"
+__author__ = "Basim Nasser"
 __product__ = "FluxDFT"
-__copyright__ = "Copyright (c) 2024 Dr. Sherif Yahya & Basim Nasser. MIT License."
+__copyright__ = "Copyright (c) 2026 Basim Nasser. MIT License."
 
 # Convenience imports for common use cases
 from .core import StructureModel, StructureLoader
