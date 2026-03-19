@@ -13,6 +13,10 @@
 </p>
 
 <p align="center">
+  <a href="gallery.md"><strong>🖼️ View the Screenshot Gallery</strong></a>
+</p>
+
+<p align="center">
   FluxDFT bridges the gap between the power of <a href="https://www.quantum-espresso.org/">Quantum ESPRESSO</a> and the ease of a modern graphical interface.<br/>
   Designed for <strong>researchers</strong>, <strong>professors</strong>, and <strong>students</strong> in computational physics and materials science.
 </p>
@@ -22,6 +26,7 @@
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
+- [Screenshot Gallery](gallery.md)
 - [Key Features](#-key-features)
 - [Getting Started](#-getting-started)
 - [Usage](#-usage)
@@ -107,6 +112,7 @@ FluxDFT provides an **end-to-end workflow** for Density Functional Theory simula
 - **Automated Report Content** — Pre-populated methodology, results tables, and figure captions.
 
 ### ☁️ Flux Cloud & User Experience
+- **Cloud Integration** — User authentication and profile management via [Supabase](https://supabase.com/).
 - **Premium Interface** — Modern dark theme with glassmorphism-inspired components and animated splash screen.
 - **Global Shortcuts** — Intuitive keyboard shortcuts with a built-in shortcuts overlay (press `?` to toggle).
 - **Desktop Notifications** — System alerts for job completions and critical events.
@@ -319,5 +325,6 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 ---
 
 <p align="center">
+  <em>Built with ❤️ for the computational materials science community</em><br/>
   <em>© 2026 FluxDFT</em>
 </p>
