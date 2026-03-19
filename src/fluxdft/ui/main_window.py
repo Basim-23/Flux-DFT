@@ -1888,6 +1888,10 @@ class MainWindow(QMainWindow):
         run_shortcut = QShortcut(QKeySequence("Ctrl+R"), self)
         run_shortcut.activated.connect(self._on_run_current)
         
+        # Ctrl+Shift+S = Screenshot
+        screenshot_shortcut = QShortcut(QKeySequence("Ctrl+Shift+S"), self)
+        screenshot_shortcut.activated.connect(self._take_screenshot)
+        
         # F11 = Toggle Fullscreen
         fullscreen_shortcut = QShortcut(QKeySequence("F11"), self)
         fullscreen_shortcut.activated.connect(self._toggle_fullscreen)
@@ -1990,6 +1994,17 @@ class MainWindow(QMainWindow):
             except: pass
         run_act.triggered.connect(self._on_run_current)
         toolbar.addAction(run_act)
+        
+        toolbar.addSeparator()
+        
+        screenshot_act = QAction("Screenshot", self)
+        screenshot_act.setToolTip("Capture full-quality screenshot (Ctrl+Shift+S)")
+        if HAS_ICONS:
+            try:
+                screenshot_act.setIcon(qta.icon("fa5s.camera", color="#a6adc8"))
+            except: pass
+        screenshot_act.triggered.connect(self._take_screenshot)
+        toolbar.addAction(screenshot_act)
     
     def _init_menubar(self):
         menubar = self.menuBar()
@@ -2027,12 +2042,21 @@ class MainWindow(QMainWindow):
         file_menu.addAction("New Project", self._on_new_project)
         file_menu.addAction("Open Project", self._on_open_project)
         file_menu.addSeparator()
+        
+        screenshot_act = QAction("Screenshot", self)
+        screenshot_act.setShortcut(QKeySequence("Ctrl+Shift+S"))
+        screenshot_act.triggered.connect(self._take_screenshot)
+        file_menu.addAction(screenshot_act)
+        
+        file_menu.addSeparator()
         file_menu.addAction("Exit", self.close)
         
         # View Menu
         view_menu = menubar.addMenu("View")
         view_menu.addAction(self.explorer_dock.toggleViewAction())
         view_menu.addAction(self.inspector_dock.toggleViewAction())
+        view_menu.addSeparator()
+        view_menu.addAction("Take Screenshot", self._take_screenshot)
         
         # Help Menu
         help_menu = menubar.addMenu("Help")
@@ -2365,6 +2389,50 @@ class MainWindow(QMainWindow):
             dialog.exec()
         except Exception as e:
             QMessageBox.warning(self, "Error", f"Failed to open Settings: {e}")
+    
+    def _take_screenshot(self):
+        """Capture a full-quality screenshot of the entire application window."""
+        # Generate default filename with timestamp
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        default_name = f"FluxDFT_screenshot_{timestamp}.png"
+        
+        # Show save dialog
+        filepath, selected_filter = QFileDialog.getSaveFileName(
+            self,
+            "Save Screenshot",
+            default_name,
+            "PNG Image (*.png);;JPEG Image (*.jpg *.jpeg);;BMP Image (*.bmp);;All Files (*)"
+        )
+        
+        if not filepath:
+            return  # User cancelled
+        
+        try:
+            # Grab the entire window at full device-pixel resolution
+            screen = QApplication.primaryScreen()
+            if screen is None:
+                QMessageBox.warning(self, "Screenshot Error", "No screen available.")
+                return
+            
+            # Use grab() on the window for full quality including all widgets
+            pixmap = screen.grabWindow(int(self.winId()))
+            
+            # Determine format from extension
+            ext = Path(filepath).suffix.lower()
+            fmt_map = {'.png': 'PNG', '.jpg': 'JPEG', '.jpeg': 'JPEG', '.bmp': 'BMP'}
+            fmt = fmt_map.get(ext, 'PNG')
+            
+            # Save with maximum quality
+            quality = 100 if fmt == 'JPEG' else -1  # -1 = default (lossless for PNG)
+            success = pixmap.save(filepath, fmt, quality)
+            
+            if success:
+                self.status_bar.showMessage(f"Screenshot saved: {filepath}", 5000)
+            else:
+                QMessageBox.warning(self, "Screenshot Error", f"Failed to save screenshot to:\n{filepath}")
+                
+        except Exception as e:
+            QMessageBox.warning(self, "Screenshot Error", f"Screenshot failed:\n{e}")
     
     def _on_about(self):
         QMessageBox.about(

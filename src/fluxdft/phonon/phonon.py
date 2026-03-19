@@ -202,10 +202,11 @@ class PhononDOS:
     """
     # Energy grid (usually in THz or cm^-1)
     energies: np.ndarray
-    energy_unit: str = "THz"  # or "cm^-1", "meV"
     
     # Total DOS
     total_dos: np.ndarray
+    
+    energy_unit: str = "THz"  # or "cm^-1", "meV"
     
     # Projected DOS per atom (optional)
     projected_dos: Optional[Dict[str, np.ndarray]] = None

@@ -1,0 +1,208 @@
+
+     Program PWSCF v.7.2 starts on 19Mar2026 at 14:30:00 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     4 processors
+
+     MPI processes distributed on     1 nodes
+     R & G space division:  proc/nbgrp/npool/nimage =       4
+     16009 MByte available memory on the printing compute node 
+
+     Reading input from si.scf.in
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  4
+
+     Input data
+     ----------
+     &CONTROL
+       calculation = 'scf'
+       prefix = 'silicon'
+       outdir = './tmp'
+       pseudo_dir = './pseudo'
+     /
+
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     a serial algorithm will be used
+
+
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min          73      73     22                  821      821     152
+     Max          74      74     23                  823      823     153
+     Sum         295     295     91                 3287     3287     609
+
+     Using Slab Decomposition
+
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =      10.2631  a.u.
+     unit-cell volume          =     271.0269 (a.u.)^3
+     number of atoms/cell      =            2
+     number of atomic types    =            1
+     number of electrons       =         8.00
+     number of Kohn-Sham states=            8
+     kinetic-energy cutoff     =      40.0000  Ry
+     charge density cutoff     =     320.0000  Ry
+     scf convergence threshold =      1.0E-08
+     mixing beta               =       0.7000
+     number of iterations used =            8  plain     mixing
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+
+     celldm(1)=  10.263102  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   0.000000   0.500000   0.500000 )
+               a(2) = (   0.500000   0.000000   0.500000 )
+               a(3) = (   0.500000   0.500000   0.000000 )
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = ( -1.000000  1.000000  1.000000 )
+               b(2) = (  1.000000 -1.000000  1.000000 )
+               b(3) = (  1.000000  1.000000 -1.000000 )
+
+
+     PseudoPot. # 1 for Si read from file:
+     ./pseudo/Si.pbe-n-rrkjus_psl.1.0.0.UPF
+     MD5 check sum: 0b0bb1205258b0d07b9f9672cf965a36
+     Pseudo is Ultrasoft + core correction, Zval =  4.0
+     Generated using "atomic" code by A. Dal Corso  v.6.3
+     Using radial grid of 1141 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     atomic species   valence    mass     pseudopotential
+        Si             4.00    28.08550     Si( 1.00)
+
+     48 Sym. Ops., with inversion, found (24 have fractional translation)
+
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           Si  tau(   1) = (   0.0000000   0.0000000   0.0000000  )
+         2           Si  tau(   2) = (   0.2500000   0.2500000   0.2500000  )
+
+     number of k points=    28  Methfessel-Paxton smearing, width (Ry)=  0.0200
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   0.0092593
+        k(    2) = (   0.1666667   0.1666667  -0.1666667), wk =   0.0740741
+        k(    3) = (   0.3333333   0.3333333  -0.3333333), wk =   0.0740741
+        k(    4) = (  -0.5000000  -0.5000000   0.5000000), wk =   0.0370370
+        k(    5) = (   0.3333333   0.0000000   0.0000000), wk =   0.0555556
+
+     Dense  grid:     3287 G-vectors     FFT dimensions: (  24,  24,  24)
+
+     Smooth grid:     3287 G-vectors     FFT dimensions: (  24,  24,  24)
+
+     Estimated max dynamical RAM per process >       1.73 MB
+
+     Estimated total dynamical RAM >       6.93 MB
+
+     Initial potential from superposition of free atoms
+
+     starting charge       7.9989, renormalised to       8.0000
+
+     negative rho (up, down):  0.000E+00 0.000E+00
+     Starting wfcs are    8 randomized atomic wfcs
+
+     total cpu time spent up to now is        0.3 secs
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=    40.00 Ry     beta= 0.70
+     total energy          =     -15.82341726 Ry
+     estimated scf accuracy    <       0.06213825 Ry
+
+     iteration #  2     ecut=    40.00 Ry     beta= 0.70
+     total energy          =     -15.82979853 Ry
+     estimated scf accuracy    <       0.00228411 Ry
+
+     iteration #  3     ecut=    40.00 Ry     beta= 0.70
+     total energy          =     -15.83064249 Ry
+     estimated scf accuracy    <       0.00009328 Ry
+
+     iteration #  4     ecut=    40.00 Ry     beta= 0.70
+     total energy          =     -15.83069573 Ry
+     estimated scf accuracy    <       0.00000225 Ry
+
+     iteration #  5     ecut=    40.00 Ry     beta= 0.70
+     total energy          =     -15.83069827 Ry
+     estimated scf accuracy    <       0.00000014 Ry
+
+     iteration #  6     ecut=    40.00 Ry     beta= 0.70
+     total energy          =     -15.83069832 Ry
+     estimated scf accuracy    <       0.00000001 Ry
+
+     End of self-consistent calculation
+
+          k = 0.0000 0.0000 0.0000 (   411 PWs)   bands (ev):
+
+    -5.7030   6.2555   6.2555   6.2555   8.7746   8.7746   8.7746   9.6272
+
+          k = 0.1667 0.1667-0.1667 (   396 PWs)   bands (ev):
+
+    -5.1222   3.6870   5.5914   5.5914   8.4850   9.5774   9.5774  12.3467
+
+     the Fermi energy is     6.5386 ev
+
+     highest occupied, lowest unoccupied level (ev):     6.2555    6.5386
+
+!    total energy              =     -15.83069832 Ry
+     estimated scf accuracy    <          3.5E-10 Ry
+     smearing contrib. (-TS)   =      -0.00000000 Ry
+     internal energy E=F+TS    =     -15.83069832 Ry
+
+     The total energy is the sum of the following terms:
+     one-electron contribution =       4.79820618 Ry
+     hartree contribution      =       1.07436879 Ry
+     xc contribution           =      -4.81765319 Ry
+     ewald contribution        =     -16.88562010 Ry
+
+     convergence has been achieved in      6 iterations
+
+     Forces acting on atoms (cartesian axes, Ry/au):
+
+     atom    1 type  1   force =     0.00001234    0.00000987   -0.00000543
+     atom    2 type  1   force =    -0.00001234   -0.00000987    0.00000543
+
+     Total force =     0.00002108     Total SCF correction =     0.00000012
+
+
+     Computing stress (Cartesian axis) for a]
+
+          total   stress  (Ry/bohr**3)                   (kbar)     P=       -3.52
+  -0.00002394   0.00000000   0.00000000         -3.52      0.00      0.00
+   0.00000000  -0.00002394   0.00000000          0.00     -3.52      0.00
+   0.00000000   0.00000000  -0.00002394          0.00      0.00     -3.52
+
+
+     PWSCF        :      1m23.45s CPU      1m45.67s WALL
+
+
+   This run was terminated on:  14:31:45  19Mar2026            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
