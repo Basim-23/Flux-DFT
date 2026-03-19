@@ -37,6 +37,3 @@ The following screenshots demonstrate the capabilities of FluxDFT:
 ![Screenshot 15](screenshots/FluxDFT_screenshot_20260319_200910.png)
 
 ![Screenshot 16](screenshots/FluxDFT_screenshot_20260319_200914.png)
-
----
-*Generated automatically by screenshot capture utility.*
