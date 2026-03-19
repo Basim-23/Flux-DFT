@@ -22,6 +22,7 @@
 </p>
 
 ![Screenshot 1](screenshots/FluxDFT_screenshot_20260319_200334.png)
+![Screenshot 5](screenshots/FluxDFT_screenshot_20260319_200728.png)
 
 ---
 
