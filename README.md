@@ -21,6 +21,8 @@
   Designed for <strong>researchers</strong>, <strong>professors</strong>, and <strong>students</strong> in computational physics and materials science.
 </p>
 
+![Screenshot 1](screenshots/FluxDFT_screenshot_20260319_200334.png)
+
 ---
 
 ## 📋 Table of Contents
