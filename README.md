@@ -4,6 +4,9 @@
   <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License"/>
   <img src="https://img.shields.io/badge/Version-2.0.0-brightgreen?style=for-the-badge" alt="Version"/>
   <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey?style=for-the-badge" alt="Platform"/>
+  <a href="README-RO.md">
+  <img src="https://img.shields.io/badge/Language-Română-yellow?style=for-the-badge" alt="Romanian"/>
+</a>
 </p>
 
 <h1 align="center">⚛️ FluxDFT</h1>
