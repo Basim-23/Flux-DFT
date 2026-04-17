@@ -9,7 +9,7 @@
 <h1 align="center">⚛️ FluxDFT</h1>
 
 <p align="center">
-  <strong>O aplicație desktop modernă și inteligentă care face calculele prin Teoria Funcționalei Densității (DFT) accesibile, eficiente și vizual intuitive.</strong>
+  <strong>O aplicație desktop modernă și inteligentă care face calculele prin Teoria Funcționalei de Densitate (DFT) accesibile, eficiente și vizual intuitive.</strong>
 </p>
 
 <p align="center">
@@ -44,7 +44,7 @@
 
 ## 🎬 Prezentare generală
 
-FluxDFT oferă un **flux de lucru complet** pentru simulările prin Teoria Funcționalei Densității — de la importul structurii cristaline până la analize gata pentru publicare:
+FluxDFT oferă un **flux de lucru complet** pentru simulările prin Teoria Funcționalei de Densitate (DFT) — de la importul structurii cristaline până la analize gata pentru publicare:
 
 1. **Importați** structuri cristaline din fișiere CIF, XYZ, POSCAR, XSF sau de intrare QE.
 2. **Configurați** parametrii de calcul cu validare conștientă de fizică și valori implicite inteligente.
@@ -65,14 +65,14 @@ FluxDFT oferă un **flux de lucru complet** pentru simulările prin Teoria Func�
 ## ✨ Funcționalități principale
 
 ### 🧠 Inteligența FluxAI
-- **Explicator de fizică** — Solicitați FluxAI să explice parametri DFT complecși și concepte de fizică direct în contextul proiectului dumneavoastră.
+- **Ghid explicativ de fizică** — Solicitați FluxAI să explice parametri DFT complecși și concepte de fizică direct în contextul proiectului dumneavoastră.
 - **Analiză a erorilor** — Analiză inteligentă a jurnalelor de erori care identifică cauzele fundamentale și sugerează remedieri specifice.
 - **Asistent de metodologie** — Redactare automată a secțiunilor tehnice de metodologie pentru lucrări de cercetare.
 
 ### 🧪 Editor inteligent de intrări
 - **Validare în timp real** — Evidențiere sintaxă în timp real cu detectarea erorilor conștientă de fizică.
 - **Sugestii de corectare automată** — Corectarea cu un singur clic a erorilor frecvente de formatare și de parametri.
-- **Valori implicite conștiente de proiect** — Detectarea automată a comportamentului metalic față de izolant pentru recomandarea parametrilor optimi de smearing și lărgire.
+- **Setări implicite adaptate proiectului** — Detectarea automată a comportamentului metalic față de izolant pentru recomandarea parametrilor optimi de smearing și lărgire.
 - **Recomandare de puncte K** — Sugestii avansate de rețea k bazate pe vectorii rețelei și densitatea țintă.
 - **Suport DFT+U** — Configurare ușoară a parametrilor Hubbard U pentru sistemele cu metale de tranziție.
 - **Parser schema DEF** — Parsează schema oficială DEF a Quantum ESPRESSO pentru validarea precisă a parametrilor și documentare.
@@ -93,7 +93,7 @@ FluxDFT oferă un **flux de lucru complet** pentru simulările prin Teoria Func�
 ### 📊 Analiza avansată a structurii electronice
 - **Structura de benzi** — Generarea traseului k de înaltă simetrie cu detectare automată a simetriei.
 - **Densitatea de stări** — DOS total și DOS proiectat (PDOS) cu descompunere orbitală.
-- **Benzi grase** — Structura de benzi rezolvată orbital cu ponderarea caracterului atomic.
+- **Fat Bands** — Structura de benzi rezolvată orbital cu ponderarea caracterului atomic.
 - **Masă efectivă** — Extracție parabolică și avansată a masei efective la extremele benzilor.
 - **Suprafața Fermi** — Vizualizarea 3D a suprafeței Fermi pentru sisteme metalice.
 - **Proprietăți optice** — Funcția dielectrică și spectrele de absorbție optică.
@@ -205,7 +205,7 @@ Executabilul este creat în `dist/FluxDFT.exe` (Windows) sau `dist/FluxDFT` (Lin
 2. **Configurați parametrii** — Utilizați Editorul inteligent de intrări cu validare live. FluxDFT va sugera puncte k, smearing și pseudopotențiale optime.
 3. **Rulați calculul** — Executați local sau trimiteți la un cluster HPC la distanță prin clientul SSH integrat.
 4. **Monitorizați progresul** — Urmăriți convergența SCF în timp real din panoul Convergence Monitor.
-5. **Analizați rezultatele** — Vizualizați structuri de benzi, DOS, benzi grase și spectre fononice din filele de analiză.
+5. **Analizați rezultatele** — Vizualizați structuri de benzi, DOS, Fat Bands și spectre fononice din filele de analiză.
 6. **Generați un raport** — Exportați rezultatele într-un raport PDF, HTML sau Markdown formatat.
 
 ### Comparație cu Materials Project
@@ -234,14 +234,14 @@ Flux-DFT/
 │       ├── core/              # Încărcare structuri, construire intrări, parsare ieșiri,
 │       │                      #   gestionare pseudopotențiale, runner sarcini, SSH/HPC
 │       ├── electronic/        # Structura de benzi, DOS, masă efectivă, suprafața Fermi,
-│       │                      #   benzi grase, proprietăți optice
+│       │                      #   Fat Bands, proprietăți optice
 │       ├── execution/         # Motor de execuție local/la distanță
 │       ├── integrations/      # Atomate2, Custodian, clientul Materials Project
 │       ├── intelligence/      # Validare, detectare erori, scoring, custodian
 │       ├── io/                # Parsarea & generarea fișierelor de intrare/ieșire QE
 │       ├── materials_project/ # Client API MP, cache date, comparator
 │       ├── phonon/            # Dispersia fononilor, DOS, termodinamică
-│       ├── plotting/          # Plotere Matplotlib (benzi, DOS, benzi grase, compozit)
+│       ├── plotting/          # Plotere Matplotlib (benzi, DOS, Fat Bands, compozit)
 │       ├── postprocessing/    # Analiza sarcinii & instrumente de post-procesare
 │       ├── reporting/         # Generator de rapoarte PDF/HTML/Markdown
 │       ├── resources/         # Foi de stil QSS & resurse statice
